@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyDemo</string>
+    <string name="stickyHeadActivity">RecyclerView 粘性头布局</string>
+</resources>
