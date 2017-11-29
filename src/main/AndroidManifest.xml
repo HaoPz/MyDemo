@@ -15,6 +15,7 @@
         <activity android:name=".Base.BaseActivity"/>
 
         <activity android:name=".StickyHeadActivity.StickyHeadActivity"/><!--RecyclerView 粘性头布局-->
+        <activity android:name=".FlowViewActivity.FlowViewActivity"/><!--FlowViewActivity 流布局-->
     </application>
 
 </manifest>

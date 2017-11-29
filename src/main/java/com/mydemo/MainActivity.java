@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mydemo.Base.BaseActivity;
+import com.mydemo.FlowViewActivity.FlowViewActivity;
 import com.mydemo.StickyHeadActivity.StickyHeadActivity;
 
 import java.util.ArrayList;
@@ -42,6 +43,9 @@ public class MainActivity extends BaseActivity {
                     case 0:// RecyclerView 粘性头布局
                         Intent goStickyHeadIntent = new Intent(MainActivity.this, StickyHeadActivity.class);
                         startActivity(goStickyHeadIntent);
+                    case 1:// FlowView 流布局
+                        Intent goFlowViewIntent = new Intent(MainActivity.this, FlowViewActivity.class);
+                        startActivity(goFlowViewIntent);
                         break;
                 }
             }
@@ -50,6 +54,7 @@ public class MainActivity extends BaseActivity {
 
     private void initData() {
         list.add(getResources().getString(R.string.stickyHeadActivity));
+        list.add(getResources().getString(R.string.FlowViewActivity));
     }
 
     class MainAdapter extends RecyclerView.Adapter<MainAdapter.BaseViewHolder> {
