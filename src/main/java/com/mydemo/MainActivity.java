@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.mydemo.Base.BaseActivity;
 import com.mydemo.FlowViewActivity.FlowViewActivity;
 import com.mydemo.StickyHeadActivity.StickyHeadActivity;
+import com.mydemo.SwipeMenuView.SwipeMenuViewActivity;
 
 import java.util.ArrayList;
 
@@ -47,6 +48,10 @@ public class MainActivity extends BaseActivity {
                         Intent goFlowViewIntent = new Intent(MainActivity.this, FlowViewActivity.class);
                         startActivity(goFlowViewIntent);
                         break;
+                    case 2:// 侧滑删除
+                        Intent goSwipeMenuViewIntent = new Intent(MainActivity.this, SwipeMenuViewActivity.class);
+                        startActivity(goSwipeMenuViewIntent);
+                        break;
                 }
             }
         });
@@ -55,6 +60,7 @@ public class MainActivity extends BaseActivity {
     private void initData() {
         list.add(getResources().getString(R.string.stickyHeadActivity));
         list.add(getResources().getString(R.string.FlowViewActivity));
+        list.add(getResources().getString(R.string.SwipeMenuView));
     }
 
     class MainAdapter extends RecyclerView.Adapter<MainAdapter.BaseViewHolder> {

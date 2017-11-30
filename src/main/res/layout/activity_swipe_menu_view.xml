@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical">
+
+    <com.mydemo.SwipeMenuView.SwipeMenuView
+        android:id="@+id/swipeMenuView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="我是内容"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/editText"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="#c1c1c1"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="#f00"
+            android:textSize="14sp" />
+
+    </com.mydemo.SwipeMenuView.SwipeMenuView>
+
+</LinearLayout>
