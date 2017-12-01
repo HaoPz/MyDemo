@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mydemo.Base.BaseActivity;
+import com.mydemo.DiyProgressBar.DiyProgressBarActivity;
 import com.mydemo.FlowViewActivity.FlowViewActivity;
 import com.mydemo.StickyHeadActivity.StickyHeadActivity;
 import com.mydemo.SwipeMenuView.SwipeMenuViewActivity;
@@ -40,7 +41,7 @@ public class MainActivity extends BaseActivity {
         mainAdapter.setMainOnClickListener(new MainOnClickListener() {
             @Override
             public void mainOnOnClickListener(int position) {
-                switch (position){
+                switch (position) {
                     case 0:// RecyclerView 粘性头布局
                         Intent goStickyHeadIntent = new Intent(MainActivity.this, StickyHeadActivity.class);
                         startActivity(goStickyHeadIntent);
@@ -52,6 +53,10 @@ public class MainActivity extends BaseActivity {
                         Intent goSwipeMenuViewIntent = new Intent(MainActivity.this, SwipeMenuViewActivity.class);
                         startActivity(goSwipeMenuViewIntent);
                         break;
+                    case 3:// 侧滑删除
+                        Intent goProgressBarViewIntent = new Intent(MainActivity.this, DiyProgressBarActivity.class);
+                        startActivity(goProgressBarViewIntent);
+                        break;
                 }
             }
         });
@@ -61,6 +66,7 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.stickyHeadActivity));
         list.add(getResources().getString(R.string.FlowViewActivity));
         list.add(getResources().getString(R.string.SwipeMenuView));
+        list.add(getResources().getString(R.string.diy_progressbar));
     }
 
     class MainAdapter extends RecyclerView.Adapter<MainAdapter.BaseViewHolder> {

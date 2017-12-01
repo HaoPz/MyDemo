@@ -3,4 +3,5 @@
     <string name="stickyHeadActivity">RecyclerView 粘性头布局</string>
     <string name="FlowViewActivity">FlowView 流布局</string>
     <string name="SwipeMenuView">侧滑删除</string>
+    <string name="diy_progressbar">进度条</string>
 </resources>

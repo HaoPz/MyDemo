@@ -22,6 +22,7 @@
         <activity android:name=".StickyHeadActivity.StickyHeadActivity" /><!--RecyclerView 粘性头布局-->
         <activity android:name=".FlowViewActivity.FlowViewActivity" /><!--FlowViewActivity 流布局-->
         <activity android:name=".SwipeMenuView.SwipeMenuViewActivity" /><!--侧滑删除 Item -->
+        <activity android:name=".DiyProgressBar.DiyProgressBarActivity" /><!--进度条 -->
     </application>
 
 </manifest>

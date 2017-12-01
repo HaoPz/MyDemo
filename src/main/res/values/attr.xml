@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="myPorgressBar">
+        <attr name="currenProgress" format="integer" /> <!--progress 当前值-->
+
+        <attr name="maxProgress" format="integer" /> <!--最大值-->
+
+        <attr name="currentNumber" format="integer" /> <!--当前进度-->
+
+        <attr name="offsetText" format="integer" /> <!--进度文字偏移量-->
+
+    </declare-styleable>
+</resources>
