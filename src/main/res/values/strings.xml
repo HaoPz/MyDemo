@@ -4,4 +4,5 @@
     <string name="FlowViewActivity">FlowView 流布局</string>
     <string name="SwipeMenuView">侧滑删除</string>
     <string name="diy_progressbar">进度条</string>
+    <string name="circle_view">圆形View</string>
 </resources>

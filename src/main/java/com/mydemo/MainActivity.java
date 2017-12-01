@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mydemo.Base.BaseActivity;
+import com.mydemo.CircleImage.CircleImageActivity;
 import com.mydemo.DiyProgressBar.DiyProgressBarActivity;
 import com.mydemo.FlowViewActivity.FlowViewActivity;
 import com.mydemo.StickyHeadActivity.StickyHeadActivity;
@@ -57,6 +58,10 @@ public class MainActivity extends BaseActivity {
                         Intent goProgressBarViewIntent = new Intent(MainActivity.this, DiyProgressBarActivity.class);
                         startActivity(goProgressBarViewIntent);
                         break;
+                    case 4:// 圆形View
+                        Intent goCircleViewIntent = new Intent(MainActivity.this, CircleImageActivity.class);
+                        startActivity(goCircleViewIntent);
+                        break;
                 }
             }
         });
@@ -67,6 +72,7 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.FlowViewActivity));
         list.add(getResources().getString(R.string.SwipeMenuView));
         list.add(getResources().getString(R.string.diy_progressbar));
+        list.add(getResources().getString(R.string.circle_view));
     }
 
     class MainAdapter extends RecyclerView.Adapter<MainAdapter.BaseViewHolder> {

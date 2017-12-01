@@ -30,13 +30,13 @@ public class DiyProgressBarActivity extends BaseActivity {
                 while (currentProgress < 100) {
                     synchronized (DiyProgressBarActivity.this){
                         try {
-                            Thread.sleep(300);
+                            Thread.sleep(100);
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     Log.i("**************", String.valueOf(currentProgress));
                                     diyMyProgress.setCurrentProgress(currentProgress);
-                                    currentProgress += 5;
+                                    currentProgress += 1;
                                 }
                             });
                         } catch (InterruptedException e) {

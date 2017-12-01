@@ -2,12 +2,17 @@
 <resources>
     <declare-styleable name="myPorgressBar">
         <attr name="currenProgress" format="integer" /> <!--progress 当前值-->
-
         <attr name="maxProgress" format="integer" /> <!--最大值-->
-
         <attr name="currentNumber" format="integer" /> <!--当前进度-->
-
         <attr name="offsetText" format="integer" /> <!--进度文字偏移量-->
-
     </declare-styleable>
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />  <!--边框宽度-->
+        <attr name="civ_border_color" format="color" /> <!--边框颜色-->
+        <attr name="civ_border_overlay" format="boolean" /> <!--边框是否存在-->
+        <attr name="civ_fill_color" format="color" /> <!--整体颜色-->
+    </declare-styleable>
+
 </resources>

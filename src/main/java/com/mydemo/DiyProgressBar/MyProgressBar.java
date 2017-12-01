@@ -92,7 +92,7 @@ public class MyProgressBar extends View {
      */
     private void initPaint() {
         leftProgressPaint = new Paint();
-        leftProgressPaint.setColor(Color.GREEN);
+        leftProgressPaint.setColor(Color.RED);
         leftProgressPaint.setStyle(Paint.Style.FILL_AND_STROKE);
         leftProgressPaint.setStrokeWidth(4);
         leftProgressPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
