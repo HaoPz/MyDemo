@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="是什么：使用Java VM的可观察序列编写异步和基于事件的程序的库"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/dimen14" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="为什么要引用RxAndroid? RxAndroid是RxJava的一个针对Android平台的扩展，主要用于 Android 开发"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/dimen14" />
+
+</LinearLayout>

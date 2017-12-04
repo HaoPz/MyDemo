@@ -5,4 +5,5 @@
     <string name="SwipeMenuView">侧滑删除</string>
     <string name="diy_progressbar">进度条</string>
     <string name="circle_view">圆形View</string>
+    <string name="rx_study">RxJava_RxAndroid学习</string>
 </resources>

@@ -14,6 +14,7 @@ import com.mydemo.CircleImage.CircleImageActivity;
 import com.mydemo.DiyProgressBar.DiyProgressBarActivity;
 import com.mydemo.FlowViewActivity.FlowViewActivity;
 import com.mydemo.StickyHeadActivity.StickyHeadActivity;
+import com.mydemo.StudyRxJava.RxJavaActivity;
 import com.mydemo.SwipeMenuView.SwipeMenuViewActivity;
 
 import java.util.ArrayList;
@@ -62,6 +63,10 @@ public class MainActivity extends BaseActivity {
                         Intent goCircleViewIntent = new Intent(MainActivity.this, CircleImageActivity.class);
                         startActivity(goCircleViewIntent);
                         break;
+                    case 5:// RxJava_RxAndroid学习
+                        Intent goRxJavaIntent = new Intent(MainActivity.this, RxJavaActivity.class);
+                        startActivity(goRxJavaIntent);
+                        break;
                 }
             }
         });
@@ -73,6 +78,7 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.SwipeMenuView));
         list.add(getResources().getString(R.string.diy_progressbar));
         list.add(getResources().getString(R.string.circle_view));
+        list.add(getResources().getString(R.string.rx_study));
     }
 
     class MainAdapter extends RecyclerView.Adapter<MainAdapter.BaseViewHolder> {
