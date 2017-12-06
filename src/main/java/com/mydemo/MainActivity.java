@@ -50,6 +50,7 @@ public class MainActivity extends BaseActivity {
                     case 0:// RecyclerView 粘性头布局
                         Intent goStickyHeadIntent = new Intent(MainActivity.this, StickyHeadActivity.class);
                         startActivity(goStickyHeadIntent);
+                        break;
                     case 1:// FlowView 流布局
                         Intent goFlowViewIntent = new Intent(MainActivity.this, FlowViewActivity.class);
                         startActivity(goFlowViewIntent);
@@ -58,7 +59,7 @@ public class MainActivity extends BaseActivity {
                         Intent goSwipeMenuViewIntent = new Intent(MainActivity.this, SwipeMenuViewActivity.class);
                         startActivity(goSwipeMenuViewIntent);
                         break;
-                    case 3:// 侧滑删除
+                    case 3:// 自定义进度条
                         Intent goProgressBarViewIntent = new Intent(MainActivity.this, DiyProgressBarActivity.class);
                         startActivity(goProgressBarViewIntent);
                         break;
