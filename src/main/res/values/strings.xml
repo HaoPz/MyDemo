@@ -6,4 +6,7 @@
     <string name="diy_progressbar">进度条</string>
     <string name="circle_view">圆形View</string>
     <string name="rx_study">RxJava_RxAndroid学习</string>
+    <string name="okhttp">okhttp封装使用</string>
+    <string name="carame_album">相机和相册调用(兼容到23)</string>
+    <string name="system_dialog">各种类型系统对话框学习</string>
 </resources>

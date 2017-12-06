@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mydemo">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OkhttpUtils.TestOkhttp">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +30,15 @@
         <activity android:name=".SwipeMenuView.SwipeMenuViewActivity" /><!--侧滑删除 Item -->
         <activity android:name=".DiyProgressBar.DiyProgressBarActivity" /><!--进度条 -->
         <activity android:name=".CircleImage.CircleImageActivity" /><!-- 圆角View -->
+
+        <!--各种类型系统对话框学习-->
+        <activity android:name=".SystemDialog.SystemDialogActivity"/>
+
+        <!--相机相册的学习 兼容到23 -->
+        <activity android:name=".CarameAlbum.CarameAlbumActivity" />
+
+        <!-- OkHttp 系列-->
+        <activity android:name=".OkhttpUtils.TestOkhttp" />
 
         <!--RxJava 系列学习-->
         <activity android:name=".StudyRxJava.RxJavaActivity" />
