@@ -5,8 +5,11 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.mydemo.Base.BaseActivity;
 import com.mydemo.R;
@@ -30,7 +33,9 @@ public class SystemDialogActivity extends BaseActivity {
         ButterKnife.inject(this);
     }
 
-    @OnClick({R.id.puTongDialog, R.id.listDialog, R.id.siginChooseDialog, R.id.muchChooseDialog, R.id.waitDialog, R.id.loadingDialog, R.id.editDialog, R.id.diyDialog})
+    @OnClick({R.id.puTongDialog, R.id.listDialog, R.id.siginChooseDialog,
+            R.id.muchChooseDialog, R.id.waitDialog, R.id.loadingDialog,
+            R.id.editDialog, R.id.diyDialogExtendDialog, R.id.diyDialog})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.puTongDialog:
@@ -54,10 +59,52 @@ public class SystemDialogActivity extends BaseActivity {
             case R.id.editDialog:
                 showEditDialog();
                 break;
+            case R.id.diyDialogExtendDialog:
+                showDiyDialogExtendDialog();
+                break;
+
             case R.id.diyDialog:
-                
+                showDiyDialogInAlertDialog();
                 break;
         }
+    }
+
+    /**
+     * 字面意思：自定义的对话框放到原生的对话框中
+     */
+    private void showDiyDialogInAlertDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(SystemDialogActivity.this);
+        builder.setCancelable(false);
+        final AlertDialog show = builder.show();
+        Window window = show.getWindow();
+        View inflate = LayoutInflater.from(SystemDialogActivity.this).inflate(R.layout.my_dialog, null);
+        window.setContentView(inflate);
+
+        TextView exit = (TextView) inflate.findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (show.isShowing()) {
+                    show.dismiss();
+                }
+            }
+        });
+    }
+
+    /**
+     * 自定义 ： 实现集成了 Dialog 对话框
+     * 自带对话框属性:1.对话框圆角, 2.系统对话框的宽度, 3.显示时候背景为灰色,
+     */
+    private void showDiyDialogExtendDialog() {
+        final MyDialogExtendDialog myDialogExtendDialog = new MyDialogExtendDialog(SystemDialogActivity.this);
+        myDialogExtendDialog.show();
+        myDialogExtendDialog.setCanceledOnTouchOutside(false);
+        myDialogExtendDialog.setOnMyDialogClickListener(new MyDialogExtendDialog.OnMyDialogClickListener() {
+            @Override
+            public void onMyDialogClickListener() {
+                myDialogExtendDialog.dismiss();
+            }
+        });
     }
 
     /**

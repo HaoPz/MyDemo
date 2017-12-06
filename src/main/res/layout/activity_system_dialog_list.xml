@@ -62,11 +62,19 @@
         android:text="编辑Dialog" />
 
     <TextView
+        android:id="@+id/diyDialogExtendDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="自定义Dialog 集成 Dialog" />
+
+    <TextView
         android:id="@+id/diyDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="自定义Dialog" />
+        android:text="自定义Dialog放到Dialog" />
 
 </LinearLayout>
