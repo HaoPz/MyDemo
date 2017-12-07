@@ -32,7 +32,7 @@
         <activity android:name=".CircleImage.CircleImageActivity" /><!-- 圆角View -->
 
         <!--各种类型系统对话框学习-->
-        <activity android:name=".SystemDialog.SystemDialogActivity"/>
+        <activity android:name=".SystemDialog.SystemDialogActivity" />
 
         <!--相机相册的学习 兼容到23 -->
         <activity android:name=".CarameAlbum.CarameAlbumActivity" />
@@ -43,6 +43,9 @@
         <!--RxJava 系列学习-->
         <activity android:name=".StudyRxJava.RxJavaActivity" />
         <activity android:name=".StudyRxJava.BaseRxjavaActivity" />
+
+        <!--status bar状态栏 学习; 5.0以下 &#45;&#45; 5.0以上区别及实现方式-->
+        <activity android:name=".StatusBarDemo.StatusBarTest"/>
     </application>
 
 </manifest>

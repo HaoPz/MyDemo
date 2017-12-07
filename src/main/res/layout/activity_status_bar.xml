@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="50dp"
+        android:text="俩种方式实现，1.在res下创建 values-v21,重写里面Theme中颜色值 \n2.在代码动态判断编译版本,通过window 对象设置色值" />
+
+
+</LinearLayout>
