@@ -45,7 +45,12 @@
         <activity android:name=".StudyRxJava.BaseRxjavaActivity" />
 
         <!--status bar状态栏 学习; 5.0以下 &#45;&#45; 5.0以上区别及实现方式-->
-        <activity android:name=".StatusBarDemo.StatusBarTest"/>
+        <activity android:name=".StatusBarDemo.StatusBarTest" />
+
+
+        <!--Activity 跳转动画-->
+        <activity android:name=".ActivityTransitions.ActivityA" />
+        <activity android:name=".ActivityTransitions.ActivityB" />
     </application>
 
 </manifest>

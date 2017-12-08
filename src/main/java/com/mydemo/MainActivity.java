@@ -1,5 +1,6 @@
 package com.mydemo;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.mydemo.ActivityTransitions.ActivityA;
 import com.mydemo.Base.BaseActivity;
 import com.mydemo.CarameAlbum.CarameAlbumActivity;
 import com.mydemo.CircleImage.CircleImageActivity;
@@ -88,6 +90,12 @@ public class MainActivity extends BaseActivity {
                         Intent goStatusBarTestIntent = new Intent(MainActivity.this, StatusBarTest.class);
                         startActivity(goStatusBarTestIntent);
                         break;
+                    case 10:// Activity 跳转动画 //  makeSceneTransitionAnimation 5.0 以下报错,这里就不处理兼容性
+                        // 如果只在 ActivityA 设置 getWindow().setExitTransition(new Fade()); 无效
+                        Intent goActivityAIntent = new Intent(MainActivity.this, ActivityA.class);
+                        startActivity(goActivityAIntent,
+                                ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                        break;
                 }
             }
         });
@@ -104,6 +112,7 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.carame_album));
         list.add(getResources().getString(R.string.system_dialog));
         list.add(getResources().getString(R.string.statusbar));
+        list.add(getResources().getString(R.string.activity_transition));
 
     }
 

@@ -10,4 +10,5 @@
     <string name="carame_album">相机和相册调用(兼容到23)</string>
     <string name="system_dialog">各种类型系统对话框学习</string>
     <string name="statusbar"><![CDATA[status bar状态栏 学习; 5.0以下 &#45;&#45; 5.0以上区别及实现方式]]></string>
+    <string name="activity_transition" >Activity 跳转动画</string>
 </resources>

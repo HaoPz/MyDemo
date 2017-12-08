@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/a1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#fafafa"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="android Activity 过程动画" />
+
+    <TextView
+        android:id="@+id/a2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#fafafa"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="android Activity 过程动画" />
+
+    <TextView
+        android:id="@+id/a3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#fafafa"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="android Activity 过程动画" />
+
+    <TextView
+        android:id="@+id/a4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#fafafa"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="android Activity 过程动画" />
+
+    <ImageView
+        android:id="@+id/transitionIcon"
+        android:transitionName="hh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/transitionIcon1"
+        android:transitionName="hh1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+</LinearLayout>
