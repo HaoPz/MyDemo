@@ -25,7 +25,6 @@ import butterknife.OnClick;
 public class ActivityA extends BaseActivity {
     @InjectView(R.id.transitionIcon)
     ImageView transitionIcon;
-    ImageView transitionIcon1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,9 +59,7 @@ public class ActivityA extends BaseActivity {
             case R.id.a4: // 共享元素
                 Intent intent4 = new Intent(ActivityA.this, ActivityB.class);
                 intent4.putExtra("transitions", 4);// explode
-                startActivity(intent4, ActivityOptions.makeSceneTransitionAnimation(this,
-                        Pair.create(transitionIcon, "hh"),
-                        Pair.create(transitionIcon1, "hh1")).toBundle());
+                startActivity(intent4, ActivityOptions.makeSceneTransitionAnimation(this,transitionIcon,"hh").toBundle());
                 break;
         }
     }
