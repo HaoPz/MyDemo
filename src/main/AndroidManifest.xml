@@ -51,6 +51,9 @@
         <!--Activity 跳转动画-->
         <activity android:name=".ActivityTransitions.ActivityA" />
         <activity android:name=".ActivityTransitions.ActivityB" />
+
+        <!--垂直滚动TextView-->
+        <activity android:name=".VerticalScrollText.VerticalScrollTextActivity"/>
     </application>
 
 </manifest>

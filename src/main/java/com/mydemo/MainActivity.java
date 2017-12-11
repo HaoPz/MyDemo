@@ -22,6 +22,7 @@ import com.mydemo.StickyHeadActivity.StickyHeadActivity;
 import com.mydemo.StudyRxJava.RxJavaActivity;
 import com.mydemo.SwipeMenuView.SwipeMenuViewActivity;
 import com.mydemo.SystemDialog.SystemDialogActivity;
+import com.mydemo.VerticalScrollText.VerticalScrollTextActivity;
 
 import java.util.ArrayList;
 
@@ -96,6 +97,12 @@ public class MainActivity extends BaseActivity {
                         startActivity(goActivityAIntent,
                                 ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
                         break;
+                    case 11:// 垂直滚动TextView
+                        // 如果只在 ActivityA 设置 getWindow().setExitTransition(new Fade()); 无效
+                        Intent goVerticalScrollTextIntent = new Intent(MainActivity.this, VerticalScrollTextActivity.class);
+                        startActivity(goVerticalScrollTextIntent,
+                                ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                        break;
                 }
             }
         });
@@ -113,6 +120,7 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.system_dialog));
         list.add(getResources().getString(R.string.statusbar));
         list.add(getResources().getString(R.string.activity_transition));
+        list.add(getResources().getString(R.string.vertical_scroll_textView));
 
     }
 
