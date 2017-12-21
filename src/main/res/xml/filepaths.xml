@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path path="" name="camera_photos" />
+
+    <!--<files-path/>代表的根目录： Context.getFilesDir()
+    <external-path/>代表的根目录: Environment.getExternalStorageDirectory()
+    <cache-path/>代表的根目录: getCacheDir()-->
+</PreferenceScreen>
