@@ -80,7 +80,6 @@ public class RetrofitActivity extends BaseActivity {
                 .build();
         RetrofitHttpPostService retrofitHttpPostService = retrofit.create(RetrofitHttpPostService.class);
 
-
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("mobile", "15275157828");
         hashMap.put("password", "asd123"); // 不是Json  {password=asd123, mobile=15275157828}

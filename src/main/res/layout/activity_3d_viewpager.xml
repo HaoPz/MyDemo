@@ -2,10 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
     android:orientation="vertical">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager3D"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:clipChildren="false"></android.support.v4.view.ViewPager>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="android:clipChildren-- false ViewPager 和 其父布局都要设置
+剩下的都是 ViewPager 的 PagerTransformer 的事情,Google在Android developer 已经给了俩种样式,具体位置要在api 中 train(训练) --- Animation --- addAnimation 子模块中 已经指出了俩种ViewPager 的移动方式.而我们做的就是在原有的样式中改变" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="ZoomOutPageTransformer 移动的 ViewPager" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager3DZoomOutPageTransformer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:clipChildren="false"></android.support.v4.view.ViewPager>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="DepthPageTransformer 移动的 ViewPager" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager3DDepthPageTransformer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:clipChildren="false"></android.support.v4.view.ViewPager>
 </LinearLayout>

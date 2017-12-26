@@ -13,16 +13,19 @@ import android.widget.TextView;
 import com.mydemo.ActivityTransitions.ActivityA;
 import com.mydemo.Base.BaseActivity;
 import com.mydemo.CarameAlbum.CarameAlbumActivity;
+import com.mydemo.CarameAlbum.CarameAlbumActivity2;
 import com.mydemo.CircleImage.CircleImageActivity;
 import com.mydemo.DiyProgressBar.DiyProgressBarActivity;
 import com.mydemo.FlowViewActivity.FlowViewActivity;
 import com.mydemo.OkhttpUtils.TestOkhttp;
+import com.mydemo.Retrofit.RetrofitActivity;
 import com.mydemo.StatusBarDemo.StatusBarTest;
 import com.mydemo.StickyHeadActivity.StickyHeadActivity;
 import com.mydemo.StudyRxJava.RxJavaActivity;
 import com.mydemo.SwipeMenuView.SwipeMenuViewActivity;
 import com.mydemo.SystemDialog.SystemDialogActivity;
 import com.mydemo.VerticalScrollText.VerticalScrollTextActivity;
+import com.mydemo.ViewPager.ViewPager3DActivity;
 
 import java.util.ArrayList;
 
@@ -103,6 +106,21 @@ public class MainActivity extends BaseActivity {
                         startActivity(goVerticalScrollTextIntent,
                                 ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
                         break;
+
+                    case 12:// 相机和相册调用(兼容到23)
+                        Intent goCarameAlbumIntent2 = new Intent(MainActivity.this, CarameAlbumActivity2.class);
+                        startActivity(goCarameAlbumIntent2);
+                        break;
+
+                    case 13:// 学习Retrofit
+                        Intent goRetrofitIntent = new Intent(MainActivity.this, RetrofitActivity.class);
+                        startActivity(goRetrofitIntent);
+                        break;
+
+                    case 14:// 3D ViewPager 画廊
+                        Intent go3dViewPagerIntent = new Intent(MainActivity.this, ViewPager3DActivity.class);
+                        startActivity(go3dViewPagerIntent);
+                        break;
                 }
             }
         });
@@ -121,6 +139,9 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.statusbar));
         list.add(getResources().getString(R.string.activity_transition));
         list.add(getResources().getString(R.string.vertical_scroll_textView));
+        list.add(getResources().getString(R.string.carame_album2));
+        list.add(getResources().getString(R.string.retrofit));
+        list.add(getResources().getString(R.string.viewpager3d));
 
     }
 
