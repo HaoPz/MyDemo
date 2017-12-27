@@ -2,6 +2,7 @@ package com.mydemo.ActivityTransitions;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.transition.Fade;
@@ -29,8 +30,11 @@ public class ActivityA extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS); // //设置允许过度动画，一定要在setContentView之前调用
-        getWindow().setExitTransition(new Fade()); // 想要生效，必须在跳转时候使用
+         // 想要生效，必须在跳转时候使用
+        if(Build.VERSION.SDK_INT >= 21){
+            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS); // //设置允许过度动画，一定要在setContentView之前调用
+            getWindow().setExitTransition(new Fade());
+        }
         //startActivity(goActivityAIntent,ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
 
         setContentView(R.layout.activity_a);
@@ -41,7 +45,6 @@ public class ActivityA extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.a1:
-
                 Intent intent1 = new Intent(ActivityA.this, ActivityB.class);
                 intent1.putExtra("transitions", 1);// explode
                 startActivity(intent1, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());

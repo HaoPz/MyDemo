@@ -2,6 +2,7 @@ package com.mydemo;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,12 +12,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.mydemo.ActivityTransitions.ActivityA;
+import com.mydemo.ActivityTransitions.ActivityC;
 import com.mydemo.Base.BaseActivity;
 import com.mydemo.CarameAlbum.CarameAlbumActivity;
 import com.mydemo.CarameAlbum.CarameAlbumActivity2;
 import com.mydemo.CircleImage.CircleImageActivity;
 import com.mydemo.DiyProgressBar.DiyProgressBarActivity;
 import com.mydemo.FlowViewActivity.FlowViewActivity;
+import com.mydemo.IndexList.IndexDemoActivity;
+import com.mydemo.LayoutImage.LayoutImageActivity;
 import com.mydemo.OkhttpUtils.TestOkhttp;
 import com.mydemo.Retrofit.RetrofitActivity;
 import com.mydemo.StatusBarDemo.StatusBarTest;
@@ -96,9 +100,16 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 10:// Activity 跳转动画 //  makeSceneTransitionAnimation 5.0 以下报错,这里就不处理兼容性
                         // 如果只在 ActivityA 设置 getWindow().setExitTransition(new Fade()); 无效
-                        Intent goActivityAIntent = new Intent(MainActivity.this, ActivityA.class);
-                        startActivity(goActivityAIntent,
-                                ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                            Intent goActivityAIntent = new Intent(MainActivity.this, ActivityA.class);
+                        /*if(Build.VERSION.SDK_INT >= 21){
+                            startActivity(goActivityAIntent,
+                                    ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
+                        }else{
+                            startActivity(goActivityAIntent);
+                        }*/
+                        Intent goActivityCIntent = new Intent(MainActivity.this, ActivityC.class);
+                        startActivity(goActivityCIntent);
+                        overridePendingTransition(R.anim.zoom_out,R.anim.state);
                         break;
                     case 11:// 垂直滚动TextView
                         // 如果只在 ActivityA 设置 getWindow().setExitTransition(new Fade()); 无效
@@ -121,6 +132,16 @@ public class MainActivity extends BaseActivity {
                         Intent go3dViewPagerIntent = new Intent(MainActivity.this, ViewPager3DActivity.class);
                         startActivity(go3dViewPagerIntent);
                         break;
+
+                    case 15://  布局 + 圆角图片
+                        Intent goLayoutImageIntent = new Intent(MainActivity.this, LayoutImageActivity.class);
+                        startActivity(goLayoutImageIntent);
+                        break;
+
+                    case 16://  26字母检索View
+                        Intent goIndexDemoIntent = new Intent(MainActivity.this, IndexDemoActivity.class);
+                        startActivity(goIndexDemoIntent);
+                        break;
                 }
             }
         });
@@ -142,6 +163,8 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.carame_album2));
         list.add(getResources().getString(R.string.retrofit));
         list.add(getResources().getString(R.string.viewpager3d));
+        list.add(getResources().getString(R.string.circleView));
+        list.add(getResources().getString(R.string.indexList));
 
     }
 

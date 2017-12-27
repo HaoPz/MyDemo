@@ -56,12 +56,19 @@
         <!--Activity 跳转动画-->
         <activity android:name=".ActivityTransitions.ActivityA" />
         <activity android:name=".ActivityTransitions.ActivityB" />
+        <activity android:name=".ActivityTransitions.ActivityC" />
 
         <!--垂直滚动TextView-->
         <activity android:name=".VerticalScrollText.VerticalScrollTextActivity"/>
 
         <!--3D ViewPager 画廊-->
         <activity android:name=".ViewPager.ViewPager3DActivity"/>
+
+        <!--布局中圆角图片-->
+        <activity android:name=".LayoutImage.LayoutImageActivity"/>
+
+        <!--26字母检索View-->
+        <activity android:name=".IndexList.IndexDemoActivity"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

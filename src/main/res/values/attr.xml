@@ -15,4 +15,11 @@
         <attr name="civ_fill_color" format="color" /> <!--整体颜色-->
     </declare-styleable>
 
+    <declare-styleable name="circleStyle">
+        <attr name="civ_border_width1" format="dimension" />  <!--边框宽度-->
+        <attr name="civ_border_color1" format="color" /> <!--边框颜色-->
+        <attr name="civ_border_overlay1" format="boolean" /> <!--边框是否存在-->
+        <attr name="civ_fill_color1" format="color" /> <!--整体颜色-->
+    </declare-styleable>
+
 </resources>
