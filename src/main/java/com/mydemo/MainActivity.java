@@ -29,6 +29,7 @@ import com.mydemo.StickyHeadActivity.StickyHeadActivity;
 import com.mydemo.StudyRxJava.RxJavaActivity;
 import com.mydemo.SwipeMenuView.SwipeMenuViewActivity;
 import com.mydemo.SystemDialog.SystemDialogActivity;
+import com.mydemo.TextSwitch.TextSwitchDemo;
 import com.mydemo.VerticalScrollText.VerticalScrollTextActivity;
 import com.mydemo.ViewPager.ViewPager3DActivity;
 
@@ -148,6 +149,11 @@ public class MainActivity extends BaseActivity {
                         Intent goCountDownTimeIntent = new Intent(MainActivity.this, CountDownTimerDemo.class);
                         startActivity(goCountDownTimeIntent);
                         break;
+
+                    case 18://  当前文本动画化并为其中的新文本添加动画
+                        Intent goTextSwitchIntent = new Intent(MainActivity.this, TextSwitchDemo.class);
+                        startActivity(goTextSwitchIntent);
+                        break;
                 }
             }
         });
@@ -172,6 +178,7 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.circleView));
         list.add(getResources().getString(R.string.indexList));
         list.add(getResources().getString(R.string.countTime));
+        list.add(getResources().getString(R.string.ADD));
 
     }
 

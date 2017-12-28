@@ -73,6 +73,9 @@
         <!-- CountDownTimer 倒计时 -->
         <activity android:name=".CountDownTimer.CountDownTimerDemo"/>
 
+        <!-- TextSwitch 滚动条 -->
+        <activity android:name=".TextSwitch.TextSwitchDemo"/>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="cn.lovexiaoai.myapp.fileprovider"
