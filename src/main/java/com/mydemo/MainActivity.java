@@ -17,6 +17,7 @@ import com.mydemo.Base.BaseActivity;
 import com.mydemo.CarameAlbum.CarameAlbumActivity;
 import com.mydemo.CarameAlbum.CarameAlbumActivity2;
 import com.mydemo.CircleImage.CircleImageActivity;
+import com.mydemo.CountDownTimer.CountDownTimerDemo;
 import com.mydemo.DiyProgressBar.DiyProgressBarActivity;
 import com.mydemo.FlowViewActivity.FlowViewActivity;
 import com.mydemo.IndexList.IndexDemoActivity;
@@ -142,6 +143,11 @@ public class MainActivity extends BaseActivity {
                         Intent goIndexDemoIntent = new Intent(MainActivity.this, IndexDemoActivity.class);
                         startActivity(goIndexDemoIntent);
                         break;
+
+                    case 17://  倒计时
+                        Intent goCountDownTimeIntent = new Intent(MainActivity.this, CountDownTimerDemo.class);
+                        startActivity(goCountDownTimeIntent);
+                        break;
                 }
             }
         });
@@ -165,6 +171,7 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.viewpager3d));
         list.add(getResources().getString(R.string.circleView));
         list.add(getResources().getString(R.string.indexList));
+        list.add(getResources().getString(R.string.countTime));
 
     }
 

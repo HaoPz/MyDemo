@@ -17,4 +17,5 @@
     <string name="viewpager3d">3D ViewPager 画廊</string>
     <string name="circleView" >布局 + 圆角图片</string>
     <string name="indexList">26字母检索View</string>
+    <string name="countTime">倒计时</string>
 </resources>

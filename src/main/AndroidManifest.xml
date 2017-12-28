@@ -70,6 +70,9 @@
         <!--26字母检索View-->
         <activity android:name=".IndexList.IndexDemoActivity"/>
 
+        <!-- CountDownTimer 倒计时 -->
+        <activity android:name=".CountDownTimer.CountDownTimerDemo"/>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="cn.lovexiaoai.myapp.fileprovider"
