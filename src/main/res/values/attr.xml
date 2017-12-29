@@ -22,4 +22,10 @@
         <attr name="civ_fill_color1" format="color" /> <!--整体颜色-->
     </declare-styleable>
 
+    <declare-styleable name="myRound">
+        <attr name="myRound_myRoundColor" format="color"/>
+        <attr name="myRound_myRoundProgressColor" format="color"/>
+        <attr name="myRound_myRoundWidth" format="dimension"/>
+    </declare-styleable>
+
 </resources>

@@ -104,6 +104,17 @@
             app:maxProgress="100"
             app:offsetText="10" />
 
+        <com.mydemo.DiyProgressBar.MyDiyProgress
+            android:id="@+id/diyDialog"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <com.mydemo.DiyProgressBar.MyCircle
+            android:id="@+id/myCircle"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
     </LinearLayout>
+
 
 </ScrollView>
