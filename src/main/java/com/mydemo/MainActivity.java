@@ -22,6 +22,7 @@ import com.mydemo.DiyProgressBar.DiyProgressBarActivity;
 import com.mydemo.FlowViewActivity.FlowViewActivity;
 import com.mydemo.IndexList.IndexDemoActivity;
 import com.mydemo.LayoutImage.LayoutImageActivity;
+import com.mydemo.MaterialDesign.MaterialDesignActivity;
 import com.mydemo.OkhttpUtils.TestOkhttp;
 import com.mydemo.Retrofit.RetrofitActivity;
 import com.mydemo.StatusBarDemo.StatusBarTest;
@@ -154,6 +155,11 @@ public class MainActivity extends BaseActivity {
                         Intent goTextSwitchIntent = new Intent(MainActivity.this, TextSwitchDemo.class);
                         startActivity(goTextSwitchIntent);
                         break;
+
+                    case 19://  ndroid  material design 总结
+                        Intent materialDesignActivity = new Intent(MainActivity.this, MaterialDesignActivity.class);
+                        startActivity(materialDesignActivity);
+                        break;
                 }
             }
         });
@@ -179,6 +185,7 @@ public class MainActivity extends BaseActivity {
         list.add(getResources().getString(R.string.indexList));
         list.add(getResources().getString(R.string.countTime));
         list.add(getResources().getString(R.string.ADD));
+        list.add(getResources().getString(R.string.material_design));
 
     }
 

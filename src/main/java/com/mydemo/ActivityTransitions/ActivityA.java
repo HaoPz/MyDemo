@@ -6,7 +6,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.transition.Fade;
-import android.util.Pair;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
@@ -15,8 +14,8 @@ import android.widget.TextView;
 import com.mydemo.Base.BaseActivity;
 import com.mydemo.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -24,21 +23,34 @@ import butterknife.OnClick;
  */
 
 public class ActivityA extends BaseActivity {
-    @InjectView(R.id.transitionIcon)
+
+
+    @BindView(R.id.a1)
+    TextView a1;
+    @BindView(R.id.a2)
+    TextView a2;
+    @BindView(R.id.a3)
+    TextView a3;
+    @BindView(R.id.a4)
+    TextView a4;
+    @BindView(R.id.transitionIcon)
     ImageView transitionIcon;
+    @BindView(R.id.transitionIcon1)
+    ImageView transitionIcon1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-         // 想要生效，必须在跳转时候使用
-        if(Build.VERSION.SDK_INT >= 21){
+        // 想要生效，必须在跳转时候使用
+        if (Build.VERSION.SDK_INT >= 21) {
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS); // //设置允许过度动画，一定要在setContentView之前调用
             getWindow().setExitTransition(new Fade());
         }
         //startActivity(goActivityAIntent,ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle());
 
         setContentView(R.layout.activity_a);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
+
     }
 
     @OnClick({R.id.a1, R.id.a2, R.id.a3, R.id.a4})
@@ -62,7 +74,7 @@ public class ActivityA extends BaseActivity {
             case R.id.a4: // 共享元素
                 Intent intent4 = new Intent(ActivityA.this, ActivityB.class);
                 intent4.putExtra("transitions", 4);// explode
-                startActivity(intent4, ActivityOptions.makeSceneTransitionAnimation(this,transitionIcon,"hh").toBundle());
+                startActivity(intent4, ActivityOptions.makeSceneTransitionAnimation(this, transitionIcon, "hh").toBundle());
                 break;
         }
     }

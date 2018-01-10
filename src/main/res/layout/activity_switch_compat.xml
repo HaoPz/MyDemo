@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/switchCompatContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="switchcompat是交换机小部件的一个版本一个开关是一个双状态切换开关小部件，可以选择两个选项。
+用户可以前后拖动“拇指”来选择所选的选项，或者只需点击切换，就好像它是一个复选框。
+text属性控制显示在开关标签上的文本，而off和on文本控制着拇指上的文本。
+类似地，textappearance和相关的settypeface（）方法控制标签文本的字体和风格，而switchtextaarance和相关的setswitchtypeface（）方法控制着那个大拇指。"
+        android:textColor="#157828" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switchCompat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:theme="@style/AppTheme"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchCompatContent"
+         />
+</android.support.constraint.ConstraintLayout>

@@ -17,6 +17,7 @@ import com.mydemo.Utils.ToastUtils;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -26,11 +27,31 @@ import butterknife.OnClick;
  */
 
 public class SystemDialogActivity extends BaseActivity {
+    @BindView(R.id.puTongDialog)
+    TextView puTongDialog;
+    @BindView(R.id.listDialog)
+    TextView listDialog;
+    @BindView(R.id.siginChooseDialog)
+    TextView siginChooseDialog;
+    @BindView(R.id.muchChooseDialog)
+    TextView muchChooseDialog;
+    @BindView(R.id.waitDialog)
+    TextView waitDialog;
+    @BindView(R.id.loadingDialog)
+    TextView loadingDialog;
+    @BindView(R.id.editDialog)
+    TextView editDialog;
+    @BindView(R.id.diyDialogExtendDialog)
+    TextView diyDialogExtendDialog;
+    @BindView(R.id.diyDialog)
+    TextView diyDialog;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_system_dialog_list);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
+
     }
 
     @OnClick({R.id.puTongDialog, R.id.listDialog, R.id.siginChooseDialog,

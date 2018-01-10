@@ -32,8 +32,8 @@ import com.mydemo.R;
 import java.io.File;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import pub.devrel.easypermissions.EasyPermissions;
 
@@ -42,11 +42,12 @@ import pub.devrel.easypermissions.EasyPermissions;
  */
 
 public class CarameAlbumActivity2 extends BaseActivity implements EasyPermissions.PermissionCallbacks {
-    @InjectView(R.id.shenfenzheng)
-    ImageView shenfenzheng;
-    @InjectView(R.id.shenfenfan)
-    ImageView shenfenfan;
 
+
+    @BindView(R.id.shenfenzheng)
+    ImageView shenfenzheng;
+    @BindView(R.id.shenfenfan)
+    ImageView shenfenfan;
     private PopupWindow carameAlbumPopUpWindow; // 弹出相机和相册pop
     private View carameAlbumLayout; // 相机和相册View
     // pop ID
@@ -68,7 +69,8 @@ public class CarameAlbumActivity2 extends BaseActivity implements EasyPermission
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carame_album);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
+
     }
 
     @OnClick({R.id.shenfenzheng, R.id.shenfenfan})

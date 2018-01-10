@@ -19,4 +19,9 @@
     <string name="indexList">26字母检索View</string>
     <string name="countTime">倒计时</string>
     <string name="ADD">广告栏-- 当前文本动画化并为其中的新文本添加动画</string>
+    <string name="material_design">android  material design 总结</string>
+    <string name="menu_search">搜索</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_navigation">导航</string>
+    <string name="menu_home">首页</string>
 </resources>

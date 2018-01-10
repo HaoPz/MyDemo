@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="346dp"
+        android:text="BottomNavigation应用程序的标准底部导航栏。是一个实现Material Design 的底部导航。底部导航栏使用户可以轻松浏览并在一次点击之间切换顶级视图。应用程序有三到五个顶级目标时应该使用它。
+        可以通过指定菜单资源文件来填充条内容。每个菜单项标题，图标和启用状态将用于显示底部导航栏项目。菜单项也可以用于以编程方式选择当前活动的目的地。它可以使用menuitem＃setchecked（true）
+
+        app:menu=xxxxx
+        item android:id=
+            android:title=
+            android:icon=
+
+        测试发现当item 3个时候,显示效果与四个或者五个显示有区别
+        "
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="首页"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationItemView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_weight="1" />
+
+    <!--itemIconTint设置应用于我们菜单项的图标的色调。-->
+    <!--itemBackground|itemTextColor 设置应用于我们菜单项的背景\文字的色调-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigationItemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/colorWhite"
+        app:itemIconTint="#2196F3"
+        app:itemTextColor="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_bottom_navigation"></android.support.design.widget.BottomNavigationView>
+
+
+</android.support.constraint.ConstraintLayout>
